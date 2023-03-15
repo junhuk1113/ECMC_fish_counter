@@ -84,6 +84,7 @@ class MyWindow(QMainWindow,start_class):
         self.fish_count_method = [self.common, self.uncommon, self.rare, self.epic, self.legendary, self.myth]
         self.fish_percent_method = [self.common_percent, self.uncommon_percent, self.rare_percent, self.epic_percent, self.legendary_percent, self.myth_percent]
         
+        self.loadSavedata()
         self.reset_btn.clicked.connect(self.reset_fish_count)
         self.pause_btn.clicked.connect(self.pause_thread)
         #ss = sub_main
@@ -112,6 +113,10 @@ class MyWindow(QMainWindow,start_class):
             self.fish_count_method[i].setText("0")
             self.fish_percent_method[i].setText("0.0")
         self.sum.setText("0")
+        with open("fishdata.dat","w") as f:
+            for i in range(6):
+                f.write("0")
+                f.write("\n")
     
     def count_up(self,g): #물고기 등급 정보를 입력 받고 입력된 등급의 물고기 마리수 1씩 증가
         
@@ -133,7 +138,25 @@ class MyWindow(QMainWindow,start_class):
             fish_percent = fish_temp / sum * 100
             fish_percent = round(fish_percent,2)
             self.fish_percent_method[i].setText(str(fish_percent))
-        
+    def saveCurrentstat(self):
+        with open("fishdata.dat","w") as f:
+            for i in range(6):
+                fish_temp=self.fish_count_method[i].text()
+                f.write(fish_temp)
+                f.write("\n")
+    def loadSavedata(self):
+        sum = 0
+        try:
+            with open("fishdata.dat","r") as f:
+                savedData = f.readlines()               
+        except:
+            return
+        for i in range(6):
+            c=savedData[i].strip()
+            sum += int(c)
+            self.fish_count_method[i].setText(c)
+        self.sum.setText(str(sum)) 
+        self.calc_percentage()
     
     @pyqtSlot(str)
     def printLog(self,result):
@@ -144,6 +167,7 @@ class MyWindow(QMainWindow,start_class):
             fish_count[g] += 1
             self.count_up(g)
         self.calc_percentage()
+        self.saveCurrentstat()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
