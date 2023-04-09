@@ -8,7 +8,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[("fish_icon.png","."),("fish_list.txt","."),("main.ui","."),("logLoader.dll","."),("qtresource_rc.py",".")],
+    datas=[("fish_icon.png","."),("fish_list.txt","."),("main.ui","."),("logLoader.dll","."),("qtresource_rc.py","."),("augmentSetting.ui","."),("circle arrow.svg",".")],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},

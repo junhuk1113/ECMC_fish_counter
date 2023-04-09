@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>361</height>
+    <width>556</width>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -682,8 +682,8 @@
   <widget class="QPushButton" name="pause_btn">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>290</y>
+     <x>430</x>
+     <y>300</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -701,8 +701,8 @@
   <widget class="QPushButton" name="reset_btn">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>240</y>
+     <x>430</x>
+     <y>265</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -720,8 +720,8 @@
   <widget class="QLabel" name="version">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>333</y>
+     <x>480</x>
+     <y>338</y>
      <width>51</width>
      <height>16</height>
     </rect>
@@ -733,7 +733,7 @@
     </font>
    </property>
    <property name="text">
-    <string>ver 1.2</string>
+    <string>ver 1.3</string>
    </property>
   </widget>
   <widget class="QLabel" name="crab">
@@ -840,8 +840,8 @@
   <widget class="QLabel" name="money_text">
    <property name="geometry">
     <rect>
-     <x>415</x>
-     <y>30</y>
+     <x>405</x>
+     <y>93</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -859,8 +859,8 @@
   <widget class="QLabel" name="entropy_text">
    <property name="geometry">
     <rect>
-     <x>374</x>
-     <y>130</y>
+     <x>364</x>
+     <y>160</y>
      <width>171</width>
      <height>31</height>
     </rect>
@@ -878,8 +878,8 @@
   <widget class="QLabel" name="gold_ea">
    <property name="geometry">
     <rect>
-     <x>488</x>
-     <y>70</y>
+     <x>478</x>
+     <y>122</y>
      <width>21</width>
      <height>31</height>
     </rect>
@@ -897,8 +897,8 @@
   <widget class="QLabel" name="entropy_ea">
    <property name="geometry">
     <rect>
-     <x>474</x>
-     <y>170</y>
+     <x>464</x>
+     <y>191</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -916,8 +916,8 @@
   <widget class="QLabel" name="label_gold">
    <property name="geometry">
     <rect>
-     <x>334</x>
-     <y>70</y>
+     <x>324</x>
+     <y>122</y>
      <width>151</width>
      <height>31</height>
     </rect>
@@ -938,8 +938,8 @@
   <widget class="QLabel" name="entropy_label">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>170</y>
+     <x>320</x>
+     <y>191</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -952,6 +952,139 @@
    </property>
    <property name="text">
     <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="estimate_income">
+   <property name="geometry">
+    <rect>
+     <x>325</x>
+     <y>55</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔스퀘어</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="estimate_ea">
+   <property name="geometry">
+    <rect>
+     <x>479</x>
+     <y>55</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔스퀘어</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>원</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="estimate_text">
+   <property name="geometry">
+    <rect>
+     <x>399</x>
+     <y>25</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔스퀘어</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>예상 수익</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="switch_btn">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>25</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>circle arrow.svg</normaloff>circle arrow.svg</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>26</width>
+     <height>26</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="augset_btn">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>230</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔스퀘어</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>보주 설정</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sum_2">
+   <property name="geometry">
+    <rect>
+     <x>243</x>
+     <y>307</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>나눔스퀘어</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>(0)</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
